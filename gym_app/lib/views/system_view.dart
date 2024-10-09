@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:gym_app/widgets/back_groundcolors.dart';
 import 'package:gym_app/widgets/navigation_drawer.dart';
+import 'package:gym_app/widgets/system_items.dart';
 
 class SystemView extends StatelessWidget {
   const SystemView({super.key});
@@ -12,6 +14,12 @@ class SystemView extends StatelessWidget {
       ),
       drawer: CustomNavigationDrawer(selectedMenuItem: 'System',
         
+      ),
+      body: Stack(
+        children:const [
+          BackGroundColors(),
+          SystemItems()
+        ],
       ),
     );
   }
